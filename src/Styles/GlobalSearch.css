@@ -1,0 +1,22 @@
+/* Styles/GlobalSearch.css */
+.global-search-form {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.global-search-input {
+    padding: 10px;
+    border: 1px solid lightgrey;
+    border-radius: 5px;
+    margin-right: 10px;
+}
+
+.global-search-button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+}

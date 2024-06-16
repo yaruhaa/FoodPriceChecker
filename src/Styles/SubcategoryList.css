@@ -1,0 +1,38 @@
+.SubcategoryList-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    padding: 15px;
+    text-align: center;
+    gap: 15px;
+    width: 1320px;
+    margin: 0 auto;
+}
+
+.SubcategoryList-h1 {
+    grid-column: 1/7;
+}
+
+.SubcategoryList-card {
+    background-color: white;
+    border: 1px solid lightgrey;
+    border-radius: 5px;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    height: 250px;
+    justify-content: space-around;
+}
+
+.SubcategoryList-card:hover {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.SubcategoryList-card img {
+    height: 170px;
+}
+
+.SubcategoryList-card_link {
+    text-decoration: none;
+    color: #222;
+}
+

@@ -1,0 +1,30 @@
+.SearchResults-grid {
+    padding-top: 15px;
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    width: 1320px;
+    margin: 0 auto;
+    gap: 15px;
+}
+
+
+.SearchResults-filter {
+    grid-column: 1/2;
+    grid-row: 2/4;
+    border: 1px solid lightgrey;
+    border-radius: 5px;
+    padding: 15px;
+    background-color: white;
+}
+
+.SearchResults-filter p {
+    margin-top: 5px;
+    font-weight: bold;
+}
+
+.SearchResults-Subcategory_link {
+    margin-top: 5px;
+    cursor: pointer;
+    color: #016DD9;
+    margin-left: 10px;
+}

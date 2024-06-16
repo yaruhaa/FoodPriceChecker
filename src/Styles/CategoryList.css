@@ -1,0 +1,40 @@
+.CategoryList-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    padding: 15px;
+    text-align: center;
+    gap: 15px;
+    width: 1320px;
+    margin: 0 auto;
+}
+
+.CategoryList-h1 {
+    grid-column: 1/5;
+}
+
+.CategoryList-card {
+    background-color: white;
+    border: 1px solid lightgrey;
+    border-radius: 5px;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+}
+
+.CategoryList-card img {
+    margin: 0 auto;
+    width: 270px
+}
+
+.CategoryList-card_title {
+    margin-top: 10px;
+}
+
+.CategoryList-card_link {
+    text-decoration: none;
+    color: #222;
+}
+
+.CategoryList-card:hover {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
