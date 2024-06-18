@@ -49,7 +49,8 @@ app.get('/search', async (req, res) => {
                     $or: [
                         { type: new RegExp(query, 'i') },
                         { firm: new RegExp(query, 'i') },
-                        { flavor: new RegExp(query, 'i') }
+                        { flavor: new RegExp(query, 'i') },
+                        { weight: new RegExp(query, 'i') }
                     ]
                 }).toArray();
 

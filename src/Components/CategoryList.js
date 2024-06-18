@@ -1,6 +1,10 @@
+//CategoryList.js
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
+import bakal from '../Images/bakal.png';
+import ovochi from '../Images/ovochi_frukty.jpeg';
+
 
 const CategoryList = () => {
     const [categories, setCategories] = useState([]);
@@ -21,9 +25,9 @@ const CategoryList = () => {
     const getCategoryImage = (categoryName) => {
         switch (categoryName) {
             case 'Бакалії':
-                return 'https://rost.kh.ua/photo/cache/48614/48701/cat/48701-228x206.jpg';
+                return bakal;
             case 'Овочі та фрукти':
-                return 'https://rost.kh.ua/photo/cache/48614/48711/cat/48711-228x206.jpg';
+                return ovochi;
             default:
                 return 'https://upload.wikimedia.org/wikipedia/commons/thumb/b/bd/Color_icon_blue.svg/1024px-Color_icon_blue.svg.png';
         }
@@ -31,7 +35,7 @@ const CategoryList = () => {
 
     return (
         <div className="CategoryList-grid">
-            <h1 className="CategoryList-h1">Категорії</h1>
+            <h1 className="CategoryList-h1">Групи товарів</h1>
 
             {categories.map(category => (
                 <Link

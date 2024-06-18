@@ -68,6 +68,13 @@
     margin-top: 15px;
 }
 
+.filter-item label, input{
+    cursor: pointer;
+}
+
+.filter-item input{
+}
+
 .products-grid {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -116,3 +123,4 @@
     border-radius: 2px;
     cursor: pointer;
 }
+

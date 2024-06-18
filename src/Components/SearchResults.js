@@ -1,3 +1,4 @@
+//SearchResults.js
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { useLocation, Link, useNavigate } from 'react-router-dom';

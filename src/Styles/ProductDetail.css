@@ -2,7 +2,7 @@
     width: 1320px;
     margin: 0 auto;
     display: grid;
-    grid-template-columns: 2fr 1fr;
+    grid-template-columns: 3fr 2fr;
     gap: 15px;
 }
 
@@ -11,7 +11,6 @@
 }
 
 .ProductDetail-info_wrapper {
-    height: 100%;
     width: 100%;
     border: 1px solid lightgrey;
     border-radius: 5px;
@@ -31,8 +30,12 @@
 }
 
 .ProductDetail-price_wrapper {
+
+    grid-row: 2/4;
+    grid-column: 2;
+
     padding: 15px;
-    width: 100%;
+
     border: 1px solid lightgrey;
     border-radius: 5px;
     background-color: white;
@@ -63,13 +66,38 @@
     align-content: center;
 }
 
-.ProductDetail-store_name, .ProductDetail-store_price, .ProductDetail-store_link {
-    width: 30%;
+.ProductDetail-store_name {
+    width: 25%;
     text-align: center;
 }
 
+.ProductDetail-store_price {
+    width: 25%;
+    text-align: center;
+}
+
+.ProductDetail-store_link {
+    width: 25%;
+    text-align: center;
+}
+
+.Cart-wrapper {
+    width: 25%;
+    text-align: center;
+}
+
+.Cart-wrapper button {
+    background-color: #016DD9;
+    color: white;
+    padding: 8px 10px;
+    font-size: 14px;
+    text-decoration: none;
+    border: 0;
+    border-radius: 2px;
+    cursor: pointer;
+}
+
 .ProductDetail-store_button {
-    width: 100%;
     background-color: #016DD9;
     color: white;
     padding: 8px 10px;
@@ -86,3 +114,4 @@
     padding: 15px;
     width: 100%;
 }
+

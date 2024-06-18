@@ -3,11 +3,13 @@ import axios from 'axios';
 import { useParams } from 'react-router-dom';
 import { Line } from 'react-chartjs-2';
 import 'chart.js/auto';
+import { useCart } from '../Contexts/CartContext';
 
 const ProductDetail = () => {
     const { category, subcategory, productId } = useParams();
     const [product, setProduct] = useState(null);
     const [history, setHistory] = useState([]);
+    const { addToCart } = useCart();
 
     useEffect(() => {
         const fetchProduct = async () => {
@@ -74,6 +76,13 @@ const ProductDetail = () => {
         return color;
     };
 
+    const handleAddToCart = (productName, storeName, productPrice) => {
+        addToCart({ productName, storeName, productPrice });
+    };
+
+    // Сортировка товаров по возрастанию цены
+    const sortedOtherInfo = [...product.OtherInfo].sort((a, b) => parseFloat(a.productPrice) - parseFloat(b.productPrice));
+
     return (
         <div className="ProductDetail-container">
             <h1 className="ProductDetail-h1">
@@ -107,9 +116,10 @@ const ProductDetail = () => {
                     <h2>Магазини</h2>
                     <h2>Ціни </h2>
                     <h2>Придбати</h2>
+                    <h2>Записати</h2>
                 </div>
                 <ul>
-                    {product.OtherInfo.map((info, index) => (
+                    {sortedOtherInfo.map((info, index) => (
                         <li key={index}>
                             <div className="ProductDetail-store_wrap">
                                 <div className="ProductDetail-store_name">
@@ -120,8 +130,15 @@ const ProductDetail = () => {
                                 </div>
                                 <div className="ProductDetail-store_link">
                                     {info.productLink &&
-                                        <a className="ProductDetail-store_button" href={info.productLink} target="_blank"
+                                        <a className="ProductDetail-store_button" href={info.productLink}
+                                           target="_blank"
                                            rel="noopener noreferrer"> До магазину</a>}
+                                </div>
+                                <div className="Cart-wrapper">
+                                    <button
+                                        onClick={() => handleAddToCart(`${product.type} ${product.firm !== "Без фірми" ? product.firm : ""} ${product.flavor !== "Без вкуса" ? product.flavor : ""} ${product.sort !== "Без сорта" ? product.sort : ""} ${product.weight}г`, info.storeName, info.productPrice)}>
+                                        До списку
+                                    </button>
                                 </div>
                             </div>
                         </li>

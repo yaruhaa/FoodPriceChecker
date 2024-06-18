@@ -23,7 +23,8 @@
 
 .CategoryList-card img {
     margin: 0 auto;
-    width: 270px
+    width: 270px;
+    height: 200px;
 }
 
 .CategoryList-card_title {
